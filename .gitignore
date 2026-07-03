@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Datasets and everything derived from them (not redistributable, see data/README.md)
+data/**/data/
+data/ready/
+performance_tracking/data/
+performance_tracking/tracking/
+
+# Model artifacts
+grading_models/BERT/saved_models/
+word_embedding/models/saved_models/
+*.bin
+*.npy
+*.parquet
+*.pth
