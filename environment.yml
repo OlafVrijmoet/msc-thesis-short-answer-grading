@@ -1,0 +1,27 @@
+
+# The study ran in 2023 on Python 3.9. The original environment was lost with the
+# machine it lived on; these are the closest working versions of the packages the
+# code imports. Verified against the data pipeline and notebook 01.
+name: asag
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pandas=1.5.3
+  - numpy=1.23.5
+  - scipy=1.10.1
+  - scikit-learn=1.2.2
+  - matplotlib=3.7.1
+  - seaborn=0.12.2
+  - nltk=3.8.1
+  - pyarrow=12.0.1
+  - tqdm
+  - jupyter
+  - pip
+  - pip:
+      - torch==2.0.1
+      - transformers==4.30.2
+      - gensim==4.3.1
+      - openai==0.27.8
+      - scikit-posthocs==0.7.0
+      - pyspellchecker==0.7.2
