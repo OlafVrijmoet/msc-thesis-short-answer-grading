@@ -3,8 +3,7 @@
 MSc thesis project, Information Science (Data Science track), University of Amsterdam, 2023.
 I compared three generations of automated short-answer grading models on five public
 datasets under one shared evaluation protocol: 37,548 graded student answers, 4,871 logged
-experiment runs, one question. Do you want the grader that scores highest, or the one that
-still works on an exam it has never seen? They are not the same model.
+experiment runs.
 
 ![Mean weighted F1 per grading model across all evaluation conditions](assets/model-progression.png)
 
@@ -133,8 +132,7 @@ explain a grade.
 ## Lessons
 
 1. The protocol is the contribution. Identical splits and metrics made three incomparable
-   literatures directly comparable, and most of the engineering effort went there, not
-   into models.
+   literatures directly comparable, and most of the engineering effort went there.
 2. Peak accuracy and transferability are different properties. Ranking models on one
    number hides the axis that decides real deployments.
 3. More context is not automatically better for an LLM. Examples from the wrong domain
@@ -164,5 +162,4 @@ The environment file pins the closest working versions of the 2023 stack (the or
 environment was lost); the data pipeline and notebook 01 are verified end to end against
 it. GPT-3.5 results are a 2023 snapshot of a since-retired model version and are not
 exactly reproducible; all other numbers come from the saved outputs in notebook 06 and
-the thesis. One count in the thesis (Beetle's size in Table 1) disagrees with the data;
-this README uses the measured numbers.
+the thesis.
