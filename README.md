@@ -23,8 +23,8 @@ not statistically significant; the transfer gap is. The full thesis with all tab
 
 Grading short open-answer questions is one of the most time-expensive parts of teaching,
 and the research field that automates it had a comparability problem: every paper reported
-on its own dataset with its own metric, RMSE here, quadratic weighted kappa there, F1
-somewhere else. You could not tell whether a fine-tuned BERT from one paper actually beat
+on its own dataset with its own metric: RMSE in one, quadratic weighted kappa in another, F1
+in a third. You could not tell whether a fine-tuned BERT from one paper actually beat
 the feature-based system from another. I built one pipeline that standardizes five public
 datasets into one schema and pushes three very different model families through identical
 splits, samples and metrics, so the comparison is direct.
@@ -101,9 +101,7 @@ More examples helped on average (0.468, 0.499, 0.514 for zero, three, five shots
 trend is not statistically significant, and it inverts on unseen domains: zero-shot scores
 0.492 there, while three and five shots with examples from other domains drop to 0.410 and
 0.402. Examples from the wrong distribution are not neutral, they actively mislead the
-grader. One more thing shipped with these numbers: the prompt asked the model to return
-"a single howl number". The typo shipped to the API in every call, GPT-3.5 graded on
-regardless, and it is preserved in this repository exactly as it ran.
+grader.
 
 ## What did not make the thesis
 
