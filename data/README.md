@@ -8,7 +8,7 @@ short download, and the pipeline rebuilds everything else.
 All student answers in these datasets come from published research corpora. No new
 student data was collected for this project.
 
-| Dataset | Answers | Questions | Grading scale | Source |
+| Dataset | Answers | Question groups | Grading scale | Source |
 |---|---|---|---|---|
 | ASAP-sas | 17,207 | 10 | 0-2 or 0-3 | [Kaggle: Automated Student Assessment Prize, short answer scoring](https://www.kaggle.com/c/asap-sas) |
 | SciEntsBank | 10,804 | 331 | correct / incorrect | [SemEval-2013 Task 7 (SRA corpus)](https://aclanthology.org/S13-2045/) |
@@ -16,8 +16,8 @@ student data was collected for this project.
 | Texas-2011 | 2,273 | 81 | 0-5, two graders averaged | [Mohler, Bunescu & Mihalcea 2011](https://aclanthology.org/P11-1076/), mirror on [Hugging Face](https://huggingface.co/datasets/nkazi/MohlerASAG) |
 | Neural Network Course | 646 | 17 | 0-2 | [DigiKlausur/ASAG-Dataset](https://github.com/DigiKlausur/ASAG-Dataset) (MPL-2.0) |
 
-Counts are measured from the standardized data produced by this pipeline. Table 1 of
-the thesis lists Beetle at 47 questions and 366 answers; the data says otherwise.
+Counts are rows in the standardized data produced by this pipeline. For the two SRA
+datasets this is one row per student answer per reference answer.
 
 ## Where to place the files
 

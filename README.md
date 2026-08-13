@@ -57,7 +57,7 @@ condition (1,400 train, 400 test, 200 validation), and the LLM grades the same v
 answers. Differences are tested with Kruskal-Wallis and Dunn's post-hoc with Bonferroni
 correction, after Shapiro-Wilk ruled out parametric tests.
 
-## Baselines: an embedding plus a regression
+## Baselines
 
 I started with the most interpretable family, replicating the setup of Gaddipati et al.
 (2020): embed student and reference answer (FastText, GloVe, ConceptNet or BERT token
@@ -72,7 +72,7 @@ and no amount of shuffling the pieces moved it. Whatever these models were missi
 was not the choice of regressor. That pointed the next step at models that read the
 answer pair as a whole.
 
-## Fine-tuned BERT: the highest peaks, the worst travel
+## Fine-tuned BERT
 
 bert-base-cased with a regression head, fine-tuned per condition on the 2,000-answer
 samples for 5 and 10 epochs. This is the family that produced the study's best single
@@ -89,7 +89,7 @@ generalization.
 
 ![Within-data vs left-out weighted F1 per model](assets/transferability.png)
 
-## GPT-3.5-turbo: the flattest profile, and examples can hurt
+## GPT-3.5-turbo
 
 The LLM entered as the opposite bet: no training at all, just a grading instruction with
 zero, three or five graded examples in the prompt, predicting on the original grade scale
@@ -130,7 +130,7 @@ explain a grade.
 ## Lessons
 
 1. The protocol is the contribution. Identical splits and metrics made three incomparable
-   literatures directly comparable, and most of the engineering effort went there.
+   literatures directly comparable.
 2. Peak accuracy and transferability are different properties. Ranking models on one
    number hides the axis that decides real deployments.
 3. More context is not automatically better for an LLM. Examples from the wrong domain
